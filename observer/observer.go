@@ -8,7 +8,7 @@ type Observer interface {
 }
 
 // In a classic Oriented Object Language this would defines the Subject's interface
-// Subject define la interfaz del sujeto.
+// Subject defines the subject interface.
 // type Subject interface {
 // 	RegisterObserver(o Observer)
 // 	RemoveObserver(o Observer)

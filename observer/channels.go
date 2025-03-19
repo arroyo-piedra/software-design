@@ -62,7 +62,7 @@ func (s *WeatherStationChannel) Notify(msg string) {
 func ObserverDevice(name string, ch chan string, wg *sync.WaitGroup) {
 	defer wg.Done()
 	for msg := range ch {
-		fmt.Printf("Observador %s recibió: %s\n", name, msg)
+		fmt.Printf("Observer %s received: %s\n", name, msg)
 	}
 }
 
