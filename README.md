@@ -5,3 +5,16 @@ The idea is to explore and teach you how to work with more efficiency and with t
 
 Go is a powerful idiomatic language, we are going to explore several ways to take advantage of it
 but also there is going to be classic implementations of several patterns.
+
+# How to run?
+
+- go run main.go {patterName}
+
+# List of pattern names:
+
+- factory
+- observer
+- channels
+- builder
+- basicPrototype
+- deepPrototype
