@@ -2,6 +2,7 @@ package pattern
 
 import (
 	"fmt"
+	"software-design/adapter"
 	"software-design/builder"
 	"software-design/factory"
 	"software-design/observer"
@@ -12,8 +13,9 @@ const Factory = "factory"
 const Observer = "observer"
 const ObserverChannels = "channels"
 const Builder = "builder"
-const basicPrototype = "basicPrototype"
-const deepPrototype = "deepPrototype"
+const BasicPrototype = "basicPrototype"
+const DeepPrototype = "deepPrototype"
+const Adapter = "adapter"
 
 type Pattern interface {
 	// Shows the example of the pattern
@@ -31,10 +33,12 @@ func CreatePattern(name string) (Pattern, error) {
 		return observer.ChannelsObserverPattern{}, nil
 	case Builder:
 		return builder.BuilderPattern{}, nil
-	case basicPrototype:
+	case BasicPrototype:
 		return prototype.BasicPrototype{}, nil
-	case deepPrototype:
+	case DeepPrototype:
 		return prototype.DeepPrototype{}, nil
+	case Adapter:
+		return adapter.AdapterPattern{}, nil
 	default:
 		return nil, fmt.Errorf("pattern not supported: %s", name)
 	}
