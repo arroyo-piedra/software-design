@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"software-design/adapter"
 	"software-design/builder"
+	"software-design/decorator"
 	"software-design/factory"
 	"software-design/observer"
 	"software-design/prototype"
@@ -16,6 +17,7 @@ const Builder = "builder"
 const BasicPrototype = "basicPrototype"
 const DeepPrototype = "deepPrototype"
 const Adapter = "adapter"
+const Decorator = "decorator"
 
 type Pattern interface {
 	// Shows the example of the pattern
@@ -39,6 +41,8 @@ func CreatePattern(name string) (Pattern, error) {
 		return prototype.DeepPrototype{}, nil
 	case Adapter:
 		return adapter.AdapterPattern{}, nil
+	case Decorator:
+		return decorator.DecoratorPattern{}, nil
 	default:
 		return nil, fmt.Errorf("pattern not supported: %s", name)
 	}
